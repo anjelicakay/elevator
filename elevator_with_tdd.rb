@@ -52,6 +52,7 @@ class Elevator
 
   def movement
     count = 0
+    
     selected_floors.each do |floor|
       if floor > @number_of_floors || floor < 1
         count += 1

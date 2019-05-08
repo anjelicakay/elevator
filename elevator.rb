@@ -52,6 +52,7 @@ class Elevator
 
   def movement
     count = 0
+
     selected_floors.each do |floor|
       if floor > @number_of_floors || floor < 1
         count += 1
@@ -64,6 +65,7 @@ class Elevator
         puts "Floor #{floor} is not accessible, please select another floor."
       end
     end
+    
     if count == 0
       puts "Going #{direction}."
       display_floor_number
@@ -110,11 +112,6 @@ elevator = Elevator.new(
                         direction: "up", 
                         selected_floors: [30, 32], 
                         current_floor: 1
-                        )
-elevator = Elevator.new(
-                        direction: "up", 
-                        selected_floors: [7, 11], 
-                        current_floor: 9
                         )
 
 
